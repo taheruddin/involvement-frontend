@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route, Switch, /*, IndexRoute, Link, hashHistory*/} from 'react-router-dom';
+import InvolvementsList from "./Involvement/InvolvementsList";
 import './App.css';
+import InvolvementForm from "./InvolvementForm/InvolvementForm";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*<header className="App-header">
+// TODO: clean up
+      </header>*/}
+      <div>
+        <Switch>
+          <Route path={"/"} exact component={InvolvementsList} />
+          <Route path={"/list"} exact component={InvolvementsList} />
+          <Route path={"/add"} exact component={InvolvementForm} />
+          <Route path={"/:id/edit"} exact component={InvolvementForm} />
+        </Switch>
+      </div>
+
+
     </div>
   );
 }

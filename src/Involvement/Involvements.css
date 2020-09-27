@@ -1,0 +1,7 @@
+.list {
+    min-width: 500px;
+}
+
+.list td {
+    border-bottom: 1px solid #ddd;
+}

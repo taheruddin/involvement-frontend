@@ -1,8 +1,16 @@
 .App {
-  text-align: center;
+  text-align: left;
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
+.App > div {
+  max-width: 1000px;
+  padding: 40px;
+}
+
+/* TODO: clean up */
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/

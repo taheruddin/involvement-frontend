@@ -1,0 +1,13 @@
+.form-item {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    margin-top: 5px;
+}
+
+.validation-message {
+    margin: 5px 0 0 0;
+    color: #cd5c5c;
+}
