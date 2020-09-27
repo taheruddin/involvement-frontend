@@ -11,12 +11,13 @@ class Selectable extends Component{
   }
 
   render() {
+    const id = this.props.sector.id;
     const beSelected = this.props.sectorsIds?.includes(this.props.sector.id);
 
     return(
       <div className="leaf">
         <label>
-          <input checked={beSelected} type="checkbox" onChange={this.handleChange} />
+          <input id={"sector-" + id} checked={beSelected} type="checkbox" onChange={this.handleChange} />
           {this.props.sector.title}
         </label>
       </div>

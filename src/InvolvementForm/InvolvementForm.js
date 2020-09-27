@@ -3,6 +3,7 @@ import SelectBox from "../SelectBox/SelectBox";
 import SaveReport from "./SaveReport";
 import "./InvolvementForm.css"
 import {post,get, put} from "../ServerClient/InvolvementClient";
+import {Link} from "react-router-dom";
 
 class InvolvementForm extends Component{
   constructor(props) {
@@ -121,7 +122,7 @@ class InvolvementForm extends Component{
             <label>Name</label>
           </div>
           <div className="form-input">
-            <input onChange={this.handleUsername} value={this.state.name} name="username" type="text"/>
+            <input id="username" onChange={this.handleUsername} value={this.state.name} name="username" type="text"/>
           </div>
           {
             this.state.saveClicked && !this.state.isValidUsername &&
@@ -143,7 +144,7 @@ class InvolvementForm extends Component{
         </div>
         <div className="form-item">
           <label>
-            <input onChange={this.handleIsAgreed} checked={this.state.isAgreed} type="checkbox"/>
+            <input id="agree" onChange={this.handleIsAgreed} checked={this.state.isAgreed} type="checkbox"/>
             Agree to terms
           </label>
           {
@@ -152,8 +153,11 @@ class InvolvementForm extends Component{
           }
         </div>
         <div className="form-item">
-          <button onClick={this.handleSave}>Save</button>
           {saveReport && <SaveReport saveReport={saveReport}/> }
+        </div>
+        <div className="form-item">
+          <button id="save" className="button left" onClick={this.handleSave}>Save</button>
+          <div id="cancel" className="button right"><Link to={"/list"}>Cancel</Link></div>
         </div>
       </div>
     );

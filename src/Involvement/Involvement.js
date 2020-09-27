@@ -6,7 +6,7 @@ function Involvement(props) {
   return (
     <tr>
       <td>{username}</td>
-      <td><Link to={"/" + id + "/edit"}>Edit</Link></td>
+      <td><Link id={"sector-" + id} to={"/" + id + "/edit"}>Edit</Link></td>
     </tr>
   );
 }

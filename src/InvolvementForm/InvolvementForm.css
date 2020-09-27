@@ -11,3 +11,29 @@
     margin: 5px 0 0 0;
     color: #cd5c5c;
 }
+
+.button {
+    display: inline;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    background-color: #ddd;
+    font-size: 14px;
+
+}
+.button:focus, .button:active {
+    outline: none;
+}
+
+.button a, .button a:visited {
+    color: #333;
+}
+.button:hover {
+    background-color: #cccccc;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}

@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+a, a:visited {
+  color: #78C106;
+  text-decoration: none;
 }
 
 code {
