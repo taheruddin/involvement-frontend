@@ -38,7 +38,7 @@ class InvolvementForm extends Component{
     }
   }
 
-  handleSave = (event) => {
+  handleSave = () => {
     this.setState({
       saveReport:false,
       saveClicked: true
@@ -58,16 +58,16 @@ class InvolvementForm extends Component{
       const failed = {cssClass: "error", message: "Failed to save data."};
       const success = {cssClass: "success", message: "Data saved successfully."};
       if (id) {
-        put(id, data).then(involvement => {
+        put(id, data).then(() => {
           this.setState({saveReport: success});
-        }).catch(error => {
+        }).catch(() => {
           this.setState({saveReport: failed});
         });
       } else {
-        post(data).then(involvement => {
+        post(data).then(() => {
           this.setState({saveReport: success});
           this.props.history.replace("/list" );
-        }).catch(error => {
+        }).catch(() => {
           this.setState({saveReport: failed});
         });
       }
@@ -103,9 +103,9 @@ class InvolvementForm extends Component{
 
   sectorRemove = (id) => {
     const sectors = this.state.sectors.filter(
-      (existingId, index) => existingId !== id
+      existingId => existingId !== id
     );
-    console.log(sectors); // TODO: clean up
+
     this.setState({
       isValidSectors:  sectors.length > 0,
       sectors: sectors

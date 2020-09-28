@@ -10,12 +10,7 @@ async function getAll() {
 
 async function get(id) {
   const response = await fetch(
-    endPoint + "/" + id/*,
-    {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(data)
-    }*/
+    endPoint + "/" + id
   );
   const involvement = response.json();
   console.log(involvement);
@@ -31,9 +26,7 @@ async function post(data) {
       body: JSON.stringify(data)
     }
   );
-  const involvement = response.json();
-  console.log(involvement); // TODO: clean up
-  return involvement;
+  return response.json();
 }
 
 async function put(id, data) {
@@ -45,9 +38,7 @@ async function put(id, data) {
       body: JSON.stringify(data)
     }
   );
-  const involvement = response.json();
-  console.log(involvement); // TODO: clean up
-  return involvement;
+  return response.json();
 }
 
 export {getAll, get, post, put};

@@ -7,9 +7,6 @@ import InvolvementForm from "./InvolvementForm/InvolvementForm";
 function App() {
   return (
     <div className="App">
-      {/*<header className="App-header">
-// TODO: clean up
-      </header>*/}
       <div>
         <Switch>
           <Route path={"/"} exact component={InvolvementsList} />

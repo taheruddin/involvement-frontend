@@ -1,7 +1,6 @@
 import React from "react";
 import Involvement from "./Involvement";
 import "./Involvements.css"
-import {Link} from "react-router-dom";
 
 
 function Involvements(props) {
